@@ -1,0 +1,48 @@
+<html ng-app="root">
+    <head>
+        <base href="/">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body>
+        <div class="container">
+            <div ui-view></div>
+        </div>
+        <!--@if DEBUG -->
+        <!-- Development Imports -->
+        <div id="import-script-libraries">
+            <script src="vendor/js/angular.js"></script>
+            <script src="vendor/js/angular-ui-router.js"></script>
+            <script src="vendor/js/jquery.js"></script>
+        </div>
+        <div id="import-user-scripts">
+            <script src="src/common/header/common.header.js"></script>
+            <script src="src/libs/routes.js"></script>
+            <script src="src/app.js"></script>
+        </div>
+        <div id="import-style-libraries">
+            <link rel="stylesheet" href="vendor/css/bootstrap.css">
+        </div>
+        <div id="import-user-style-libraries">
+            <link rel="stylesheet" href="src/common/header/common.header.css">
+        </div>
+        <!-- Development Imports -->
+        <!--@endif-->
+        <!--@if !DEBUG -->
+        <!-- Production Imports -->
+        <div id="import-script-libraries">
+            <script src="main.min.js"></script>
+        </div>
+        <div id="import-user-scripts">
+            <script src="common.min.js"></script>         
+        </div>
+        <div id="import-style-libraries">
+            <link rel="stylesheet" href="main.min.css">
+        </div>
+        <div id="import-user-style-libraries">
+            <link rel="stylesheet" href="common.min.css">
+        </div>
+        <!-- Production Imports -->
+        <!--@endif-->
+    </body>
+</html>

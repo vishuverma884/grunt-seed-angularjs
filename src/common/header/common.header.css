@@ -1,0 +1,9 @@
+.container{
+    background-color: #000000;
+}
+
+div{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
